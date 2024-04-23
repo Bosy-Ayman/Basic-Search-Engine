@@ -62,4 +62,5 @@ To use the search engine:
 
 ## Acknowledgments
 
-- [List any acknowledgments or resources used in the project]
+- [Pyterrier](https://pyterrier.readthedocs.io/en/latest/terrier-index-api.html)
+- [NLTK](https://www.nltk.org/)
