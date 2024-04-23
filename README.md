@@ -1,4 +1,4 @@
-# Project: Basic Search Engine
+# Basic Search Engine
 
 ## Overview
 
