@@ -1,0 +1,23 @@
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Docs Search App</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <h1>Documents Search App</h1>
+    <for method ="POST">
+      <input type="text" id="search-input" placeholder="Search for Documents..." />
+      <button id="search-button">Search</button>
+    </form>
+    <div class="search-results">
+    </div>
+    <button id="show-more-button">Show more</button>
+    <script src="/static/script.js"></script>
+  </body>
+</html>
+{% endblock %}
