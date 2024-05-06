@@ -1,23 +1,58 @@
-{% block content %}
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Docs Search App</title>
-    <link rel="stylesheet" href="/static/styles.css" />
-  </head>
-  <body>
-    <h1>Documents Search App</h1>
-    <for method ="POST">
-      <input type="text" id="search-input" placeholder="Search for Documents..." />
-      <button id="search-button">Search</button>
-    </form>
-    <div class="search-results">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results</title>
+    <link rel="stylesheet" href="/static/styles.css"> 
+    <link href="https://fonts.cdnfonts.com/css/playpen-sans" rel="stylesheet">
+
+</head>
+<body>
+    <style>
+        @import url('https://fonts.cdnfonts.com/css/playpen-sans');
+</style>
+
+    <div class="container">
+        <h1>Twitter Search Engine</h1>
+        <img src="/static/x-logo-png.webp" alt="Photo" class="top-photo">
+    </br>
+        <div class="search" id="search">
+            <form action="/search" method="post">
+                <input type="text" class="searchTerm" name="query" placeholder="What are you looking for ?">
+                <button type="submit" class="searchButton"><i class="fa fa-search">Search</i></button>
+            </form>
+        </div>
+
+        <p>Search completed in: {{ search_duration }}</p>
+
+        <div id="results">
+            {% if results %}
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Document Number</th>
+                            <th>Original Tweet</th>
+                            <th>Rank</th>
+                            <th>TF-IDF Score</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for result in results %}
+                            <tr>
+                                <td>{{ result['docno'] }}</td>
+                                <td>{{ result['original_tweet'] }}</td>
+                                <td>{{ result['rank'] }}</td>
+                                <td>{{ result['score'] }}</td>
+                                <!-- Add more columns as needed -->
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            {% else %}
+                <p>No results found.</p>
+            {% endif %}
+        </div>
     </div>
-    <button id="show-more-button">Show more</button>
-    <script src="/static/script.js"></script>
-  </body>
+</body>
 </html>
-{% endblock %}

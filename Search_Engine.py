@@ -19,7 +19,7 @@ nltk.download('stopwords')
 nltk.download('punkt')
 stop_words = set(stopwords.words('english'))
 
-df = pd.read_csv('/content/Corona_NLP_test.csv')
+df = pd.read_csv('corona.csv')
 df.head()
 
 # Initialize Porter stemmer
@@ -54,7 +54,7 @@ def preprocess(sentence):
 
 res = df['OriginalTweet'].apply(preprocess)
 df['docno'] = df["ScreenName"].astype(str)
-pd_indexer = pt.DFIndexer("./pd_index1")
+pd_indexer = pt.DFIndexer("F:/CSAI/2nd year/Spring/Data Retrieval and Information Retreival/IR_Project/pd_index1")
 indexref = pd_indexer.index(df["OriginalTweet"], df["docno"])
 
 index = pt.IndexFactory.of(indexref)
