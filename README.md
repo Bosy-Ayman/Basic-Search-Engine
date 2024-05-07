@@ -1,5 +1,7 @@
 # Basic Search Engine
 
+![image](https://github.com/Bosy-Ayman/Basic-Search-Engine/assets/112729185/6cb26254-97cd-4b68-b642-098f4cb3a68b)
+
 ## Overview
 
 This project aims to design and implement a basic search engine for a collection of text documents. The search engine will allow users to input queries and retrieve relevant documents from the corpus. The project will involve data collection, preprocessing, indexing, query processing, query expansion, user interface development, and evaluation of the search engine's performance.
