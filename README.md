@@ -50,17 +50,6 @@ This project aims to design and implement a basic search engine for a collection
 - Evaluate the performance of the search engine:
   - Test with various queries to assess retrieval accuracy and speed.
 
-## Usage
-
-To use the search engine:
-1. Ensure the corpus is collected and stored in a suitable format.
-2. Run the preprocessing steps to tokenize, lowercase, remove stopwords, and perform stemming/lemmatization.
-3. Build the inverted index based on the preprocessed documents.
-4. Implement query processing to handle user queries and retrieve relevant documents.
-5. Incorporate query expansion techniques for enhanced search results.
-6. Develop a user interface for easy interaction with the search engine.
-7. Evaluate the performance by testing with diverse queries and measuring retrieval accuracy and speed.
-
 
 ## Acknowledgments
 
